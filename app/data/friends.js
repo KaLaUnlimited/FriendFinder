@@ -8,3 +8,25 @@
 // What’s the single most important thing for a relationship to be successful?
 // #7 Would you ever say sorry to me even if it’s not your fault?
 //  If I told you to jump off a tall cliff and tell you that you’ll land safely because there’s a net you can’t see yet, would you blindly trust me and jump?
+
+
+
+var friendsArray=[
+	{	
+		name:"Kavodel",
+		photo:"Yes",
+		q1:"1",
+		q2:"1",
+		q3:"1",
+		q4:"1",
+		q5:"1",
+		q6:"1",
+		q7:"1",
+		q8:"1",
+		q9:"1",
+		q10:"1"
+	
+	}	
+];
+
+module.exports=friendsArray;

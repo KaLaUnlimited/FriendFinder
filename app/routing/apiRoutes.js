@@ -1,16 +1,11 @@
 
 
-// var app = require("../../server.js");
-// var path= require("path");
-
-
-// //logic
-// // "get/api/friends"
+var friendsData= require("../data/friends.js")
 
 module.exports=function (app){
 app.get("/api/friends",function(request,response){
 
-	response.send("Ready to post friends!");
+	response.send(friendsData);
 	 
 	 //response.sendFile(path.join(__dirname, "../public/survey.html"));
 	// console.log(path.join(__dirname, "vs13index.html"));
@@ -18,9 +13,15 @@ app.get("/api/friends",function(request,response){
 })
 
 
+
+
+app.post("/api/friends",function(request,response){
+
+	friendsData.push(request.body);
+
+});
+
 }
-
-
 
  //module.exports=getAPIFriends();
 
