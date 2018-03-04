@@ -7,9 +7,8 @@ app.get("/api/friends",function(request,response){
 
 	response.send(friendsData);
 	 
-	 //response.sendFile(path.join(__dirname, "../public/survey.html"));
-	// console.log(path.join(__dirname, "vs13index.html"));
-	console.log("testing!");
+	
+	console.log("friendsData!");
 })
 
 
@@ -22,9 +21,3 @@ app.post("/api/friends",function(request,response){
 });
 
 }
-
- //module.exports=getAPIFriends();
-
-// // post
-
-// /api/friends

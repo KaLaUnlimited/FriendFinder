@@ -10,6 +10,10 @@
 //  If I told you to jump off a tall cliff and tell you that you’ll land safely because there’s a net you can’t see yet, would you blindly trust me and jump?
 
 
+//alert("Linked with survey.html!");
+
+
+
 
 var friendsArray=[
 	{	
@@ -25,7 +29,8 @@ var friendsArray=[
 		"1",
 		"1",
 		"1",
-		"1"
+		"1",
+		
 	]
 	}	
 ];
