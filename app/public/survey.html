@@ -179,7 +179,7 @@
         </div>
         <div class="modal-body">
           <h2 id="match-name"></h2>
-          <!-- <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt=""> -->
+          <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -240,6 +240,7 @@
           name: $("#name").val(),
           photo: $("#photo").val(),
           scores: [
+
             $("#q1").val(),
             $("#q2").val(),
             $("#q3").val(),
@@ -271,13 +272,43 @@
       $.ajax({ url: currentURL + "/api/friends", method: "GET" })
       .then(function(Data) {
       	console.log("AjazuserDate:" + JSON.stringify(Data[1].name));
+      		var diff='';
+      		var totalDiff=0;
+      		var total=0;
+//       		for (var property1 in Data) {
+//   string1 = string1 + Data[property1];
+// }					var f=q+1;
+
+      		
+      		//console.log("on the mic: " + ( parseInt(Data[0].scores[1])+ parseInt(Data[1].scores[1])) );
+      		function findMin (){
+      			for (var i=0;i<10;i++){
+      				var min= Math.abs( (parseInt(Data[length-1].scores[i])) -  (parseInt(Data[0].scores[i])));
+
+      			}
+      			return min;
+      		}
+      		
+      		
+      		for(var i =0; i <Data.length;i++){
+      			for (var i=0;i<10;i++){
+      			var num= Math.abs(  (parseInt(Data[length-1].scores[i])) -  (parseInt(Data[0].scores[i])));
+      				total+=num;
+      		}
+      			if(total<min){
+      				min=total;
+      				diff=JSON.stringify(Data[i].name);
+      			}
+
+			}
          $("#results-modal").modal("toggle");
-          $("#match-name").text(JSON.stringify(userData.name));
+          $("#match-name").text(JSON.stringify(Data.name));
+            $("#match-img").attr("src", JSON.stringify(Data.photo));
         
       });
 
        
-      //      $("#match-img").attr("src", JSON.stringify(userData.photo));
+      //    
        } 
       else {
         alert("Please fill out all fields before submitting!")
