@@ -263,15 +263,16 @@
 
                     var min = initialMin();
 
-
+                    	//findMin function consists of two for loops. the outer loop will iterate through each person profile. the inner loop will compare each question with the last submission questions. 
                     function findMin() {
 
-                        var question = 0;
-                        for (var i = 1; i <= Data.length - 2; i++) {
+                        var questions = 10;
+                        var allProfiles= Data.length-2;
+                        for (var i = 1; i <= allProfiles; i++) {
                             var num = 0;
-                            for (var j = 0; j < 10; j++) {
+                            for (var j = 0; j < questions; j++) {
                                 num += Math.abs((parseInt(Data[Data.length - 1].scores[j])) - (parseInt(Data[i].scores[j])));
-                                //total+=num;
+                                
                             }
                             if (num < min) {
                                 min = num;
