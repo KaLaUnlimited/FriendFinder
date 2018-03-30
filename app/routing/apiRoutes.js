@@ -17,6 +17,7 @@ app.get("/api/friends",function(request,response){
 app.post("/api/friends",function(request,response){
 
 	friendsData.push(request.body);
+	response.send(friendsData);
 
 });
 
