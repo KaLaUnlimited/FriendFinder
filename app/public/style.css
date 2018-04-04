@@ -1,3 +1,9 @@
+.overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:10;
+}
 .homepage-hero-module {
     border-right: none;
     border-left: none;
