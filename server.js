@@ -7,7 +7,7 @@ var app = express();
 
 
 
-var PORT = process.env.port || 4000;
+var PORT = process.env.Port || 4000;
 
 
 
