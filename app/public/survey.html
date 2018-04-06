@@ -257,6 +257,7 @@
                 $.post("/api/friends", userData).then(function (data) {
                     var match;
                     var min = 0;
+                    console.log(`data in the front: ${data}` )
 
                     // this findMin will return the difference between the
                     // first index of the array and the last index of the

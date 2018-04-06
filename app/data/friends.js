@@ -16,6 +16,7 @@
 
 
 var friendsArray=[
+	
 	{	
 		name:"Kavodel",
 		photo:"Yes",
