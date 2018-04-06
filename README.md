@@ -10,4 +10,8 @@ Technology used:
 * Express.js
 * Ajax
 
-[[/app/public/Triple_Date.jpg|Triple Date Image]]
+
+App:
+https://amigosfinder.herokuapp.com/
+
+[./app/public/Triple_Date.jpg|Triple Date Image]
